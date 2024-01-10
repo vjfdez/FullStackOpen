@@ -27,4 +27,6 @@ sequenceDiagram
     server-->>browser: JSON document
     deactivate server
 
-    ![04](https://github.com/vjfdez/part01---FullStackOpen/assets/68879881/1d3d7245-15a4-4e79-9755-5c485a204e64)
+![04](https://github.com/vjfdez/FullStackOpen/assets/68879881/a208f12b-9623-4790-8b6b-866e65ebd0e5)
+
+
