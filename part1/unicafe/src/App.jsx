@@ -10,7 +10,7 @@ const App = () => {
   const [bad, setBad] = useState(0);
   const [all, setAll] = useState(0);
   const [average, setAverage] = useState(0);
-  const [positive, setPositive] = useState(0);
+  const [positiveAvg, setPositiveAvg] = useState(0);
 
   console.log(`Datos al recargar pag. Good ${good} Bad ${bad} All ${all}`)
 
@@ -29,15 +29,9 @@ const App = () => {
     setAll(all + 1)
   };
 
-  const avgPositive = () => {
-    setAverage((good - bad)/all)
-    setPositive((100*good)/all)
-  };
+  const avg = good - bad /all ;
+  const positive = 100*good /all;
 
-  useEffect(()=> {
-    avgPositive()
-    console.log(`Good ${good} Bad ${bad} All ${all}`)
-  });
 
   if(all !==0){
     return (
@@ -51,7 +45,7 @@ const App = () => {
         <Counter count={neutral} text="Neutral: "/>
         <Counter count={bad} text="Bad: "/>
         <Counter count={all} text="All: "/>
-        <Counter count={average} text="Average: "/>
+        <Counter count={avg } text="Average: "/>
         <Counter count={positive} text="% Positive: "/>
       </>
     )
